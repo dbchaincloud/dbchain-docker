@@ -1,4 +1,4 @@
-[中文](https://github.com/dbchaincloud/dbchain/blob/master/README_ch.md)
+[中文](https://github.com/dbchaincloud/dbchain/blob/master/README_ch.md) :point_left:
 
 # dbchain
 dbChain full node provides blockchain based relational database with integrated ipfs.

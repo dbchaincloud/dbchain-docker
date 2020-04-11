@@ -1,4 +1,4 @@
-[English](https://github.com/dbchaincloud/dbchain/blob/master/README.md)
+[English](https://github.com/dbchaincloud/dbchain/blob/master/README.md) :point_left:
 
 # 库链
 库链全节点提供基于区块链的关系数据库，并高度集成了ipfs作为联盟链的分布式存储。为区块链应用提供了完整解决方案。 
