@@ -43,13 +43,13 @@ In the container bash, run the follow commands
   $ dbchaincli config indent true
   $ dbchaincli config trust-node true
   $ dbchaind gentx --name alice
-  $ dbchaind collect-gentx
+  $ dbchaind collect-gentxs
   $ dbchaind validate-genesis
   $ exit
 ```  
 ## run
 After the above configuring, it's time to start the full node
 ```shell
-$ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
+$ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -d -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
 ```
 

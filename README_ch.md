@@ -44,7 +44,7 @@ $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/
   $ dbchaincli config indent true
   $ dbchaincli config trust-node true
   $ dbchaind gentx --name alice
-  $ dbchaind collect-gentx
+  $ dbchaind collect-gentxs
   $ dbchaind validate-genesis
   $ exit
 ```  
@@ -52,5 +52,5 @@ $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/
 在完成上面的配置工作后，现在启动库链全节点:
 
 ```shell
-$ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
+$ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -d -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
 ```
