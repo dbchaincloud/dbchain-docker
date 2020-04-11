@@ -2,7 +2,9 @@
 dbChain full node provides blockchain based relational database with integrated ipfs.
 
 ## install
+```shell
 $ docker pull dbchain/dbchain
+```
 
 ## config
 ```shell
