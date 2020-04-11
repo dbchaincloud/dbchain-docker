@@ -1,14 +1,14 @@
-[中文](https://github.com/dbchaincloud/dbchain/blob/master/README_ch.md)
+[English](https://github.com/dbchaincloud/dbchain/blob/master/README.md)
 
-# dbchain
-dbChain full node provides blockchain based relational database with integrated ipfs.
+# 库链
+库链全节点提供基于区块链的关系数据库，并高度集成了ipfs作为联盟链的分布式存储。为区块链应用提供了完整解决方案。 
 
-## install
+## 安装 
 ```shell
 $ docker pull dbchain/dbchain
 ```
 
-## config
+## 配置 
 ```shell
 $ sudo docker network create --subnet="172.20.0.0/16" dbcnet
 
@@ -17,18 +17,19 @@ $ mkdir docker_store
 $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/docker_store:/home/dbchain/store dbchain/dbchain bash
 ```
 
-In the docker client os, do the following:
+在docker容器环境里，运行如下命令:
 
 ```shell
   $ cp .bashrc .profile store
   $ exit
 ```  
-  
-Then run the follow command to get in the container bash
+然后用下面的命令重新进入容器:
+
 ```shell
 $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain bash
 ```
-In the container bash, run the follow commands
+在容器里，运行下面命令:
+
 ```shell
   $ ipfs init
   $ dbchaind init node01 --chain-id testnet
@@ -47,9 +48,9 @@ In the container bash, run the follow commands
   $ dbchaind validate-genesis
   $ exit
 ```  
-## run
-After the above configuring, it's time to start the full node
+## 运行
+在完成上面的配置工作后，现在启动库链全节点:
+
 ```shell
 $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
 ```
-
