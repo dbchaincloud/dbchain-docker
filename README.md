@@ -3,12 +3,12 @@
 # dbchain
 dbChain full node provides blockchain based relational database with integrated ipfs.
 
-## install
+## Install
 ```shell
 $ docker pull dbchain/dbchain
 ```
 
-## config
+## Configure
 ```shell
 $ sudo docker network create --subnet="172.20.0.0/16" dbcnet
 
@@ -47,7 +47,7 @@ In the container bash, run the follow commands
   $ dbchaind validate-genesis
   $ exit
 ```  
-## run
+## Run
 After the above configuring, it's time to start the full node
 ```shell
 $ sudo docker run --net dbcnet --ip 172.20.0.101 --user 1000:1000 -it -d -v $(pwd)/docker_store:/home/dbchain dbchain/dbchain
